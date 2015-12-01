@@ -355,6 +355,7 @@ for (my $j=0; $j<= $count; $j++){
 			}
 		}
 	}
+	#push score for each index entry's needle matching value to an array
 	push @pairWiseScores, $tempScore;
 }
 #Finds Max Value
@@ -368,8 +369,10 @@ for (0 .. $#pairWiseScores){
 		push @matchesList, $_;
 	}
 }
-my @slice = @splitHaystack[$matchesList[0] .. (($matchesList[0]) + $needleLength - 1)];
 
+#Generates Highest Scoring Sequence as Array
+my @slice = @splitHaystack[$matchesList[0] .. (($matchesList[0]) + $needleLength - 1)];
+#Turns Best Sequence into String
 my $matchSeq = join('', @slice);
 
 #Find Percent Identity
@@ -377,6 +380,7 @@ my $percentIdentity = sprintf("%.4f",($max*100/$needleLength));
 
 #Find Ending Index
 my $indexEnd = ($matchesList[0]) + $needleLength - 1;
+
 print "PairWise Sequence Alignment Report:\n";
 print "search  sequence:         '$needle'\n";
 print "matched sequence:         '$matchSeq'\n";
