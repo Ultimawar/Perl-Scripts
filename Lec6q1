@@ -1,0 +1,18 @@
+use strict;
+use warnings;
+
+print "Enter an ALPHANUMERIC string:";
+chomp(my $str1 = <STDIN>);
+
+if ($str1 =~ /[^a-z][^A-Z][^0-9]/){
+	print qq{Exception Found... NOT ALPHANUMERIC\n};
+}
+else {print "$str1 satifies conditions!\n";}
+
+print "Enter an uppercase ALPHABETIC string:";
+chomp(my $str2 = <STDIN>);
+
+if ($str2 =~ /[^A-Z]/){
+	print qq{Exception Found... NOT ALL UPPERCASE ALPHABETIC\n};
+}
+else {print "$str2 satifies conditions!\n";}
