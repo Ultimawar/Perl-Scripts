@@ -17,6 +17,11 @@ $ok = cleaveAndBind(\@dna1, \@dna2, \$seq, \$pos);
 print $dna1[0][0], "\n", $dna1[1][0], "\n", $dna2[0][0], "\n", $dna2[1][0], "\n" if($ok);
 exit;
 
+$seq = "GAACTT";
+$ok = cleaveAndBind(\@dna1, \@dna2, \$seq, \$pos);
+print $dna1[0][0], "\n", $dna1[1][0], "\n", $dna2[0][0], "\n", $dna2[1][0], "\n" if($ok);
+
+exit;
 
 sub cleaveAndBind($$$$) {
 	#those are references to arrays and scalars
@@ -32,6 +37,12 @@ sub cleaveAndBind($$$$) {
 	
 	#the first DNA strand in DNA 1
 	my $offset1 = index(${$refDNA1}[0][0], $$refSeq);
+	
+	#if not found return false value
+	unless ($offset1){
+		return 0
+	}
+	
 	my $substring1 = substr ${$refDNA1}[0][0], 0, ($offset1+1);
 	my $substring2 = substr ${$refDNA1}[0][0], ($offset1+1);
 	${$refDNA1}[0][0] = $substring1;
