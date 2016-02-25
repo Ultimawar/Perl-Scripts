@@ -2,9 +2,11 @@
 my @numbers = (0..999);
 
 #Lec4q2b
-print qq($numbers[0] @numbers[100..120] $numbers[-1]\n); # 1. Scalar Element View 
-														 # 2. Splicing array. 
-														 # 3. Scalar element view with negative index for last entry.
+print qq($numbers[0] @numbers[100..120] $numbers[-1]\n); 
+# 1. Scalar Element View 
+# 2. Splicing array. 
+# 3. Scalar element view with negative index for last entry.
+
 #Lec4q2c
 pop(@numbers); #will 'pop' off the last entry
 
