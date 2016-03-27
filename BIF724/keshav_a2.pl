@@ -1,15 +1,15 @@
-# Program name: kdial_assignment2.pl
+# Program name: 	keshav_a2.pl
 # Course:		BIF724
 # Purpose: 		The purpose of this program is to allow a user to easily retrieve 
-#				both the DNA sequence and translated amino acid sequence of a gene
-#				of interest for a list of GenBank ids. 
-# 				This program accepts 2 arguments: the first corresponding to a list
-# 				which will contain the GenBank ids, the second which indicates the 
-# 				gene of interest. 
-#				The program outputs two files: 
-#				(1)dna_keshav_*gene id*.fa and (2) aa_keshav_*gene id*.fa
-#				Both will contain the DNA and AA information respectively retrieved 
-#				from GenBank.
+#			both the DNA sequence and translated amino acid sequence of a gene
+#			of interest for a list of GenBank ids. 
+# 			This program accepts 2 arguments: the first corresponding to a list
+# 			which will contain the GenBank ids, the second which indicates the 
+# 			gene of interest. 
+#			The program outputs two files: 
+#			(1)dna_keshav_*gene id*.fa and (2) aa_keshav_*gene id*.fa
+#			Both will contain the DNA and AA information respectively retrieved 
+#			from GenBank.
 
 # I declare that the attached assignment is wholly my own work in accordance with
 # Seneca Academic Policy. No part of this assignment has been copied manually or
