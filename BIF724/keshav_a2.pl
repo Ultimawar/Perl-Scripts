@@ -115,7 +115,8 @@ unless ($genbank_list && $gene_name) {
 							$sequence_string = $seq->subseq($start,$stop);
 						}else{
 							# If strand is -1, we need the reverse complement strand
-							my $reverse = $seq->revcom();
+							my $ass = Bio::Seq->new(-seq=> $seq->subseq($start,$stop));
+							my $reverse = $ass->revcom();
 							$sequence_string = $reverse->subseq($start,$stop);
 						}
 						# Print Status of Writing DNA sequence to File
